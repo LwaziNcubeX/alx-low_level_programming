@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc -c $CFILE -S -o main.o | cat  main.o | head
+gcc -c $CFILE
