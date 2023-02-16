@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <string.h>
+#include <unistd.h>
 /**
  * main - Prints without printf and puts
  *
@@ -8,7 +8,6 @@
 
 int main(void)
 {
-	fwrite(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", strlen);
-
+	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", stdout);
 	return (1);
 }
