@@ -8,8 +8,8 @@
 
 int main(void)
 {
-	char quote[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
+	char quo[] = "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n";
 
-	fputs("%s", quote, stdout);
+	fputs("%s", quo, stdout);
 	return (1);
 }
