@@ -1,6 +1,8 @@
 #include <stdio.h>
 /**
- * main - prints a string withount using printf function
+ * main - prints "Programming is like building a multilingual puzzle
+ *
+ * Return: always 0 unless stated otherwise...
  */
 int main(void)
 {
