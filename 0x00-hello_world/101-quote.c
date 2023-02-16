@@ -8,6 +8,8 @@
 
 int main(void)
 {
+	fp = stdout
+
 	fputs("and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", fp);
 	return (1);
 }
