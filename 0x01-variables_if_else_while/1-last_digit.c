@@ -5,7 +5,7 @@
  * main - Entry point
  *
  * Return - 0 meaning success
- *\
+ */
  int main (void)
  {
 	int n;
