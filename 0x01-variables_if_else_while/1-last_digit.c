@@ -1,14 +1,14 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <time.h>
-/*main - Entry point
+/*
+ * main - Entry point
  *
- *Return - 0 meaning succes
- *
+ * Return - 0 meaning success
  *\
  int main (void)
  {
- 	int n;
+	int n;
 
 	srand(time(0));
 	n = rand() - RAND_MAX / 2;
