@@ -6,8 +6,8 @@
  *
  * Return - 0 meaning success
  */
- int main (void)
- {
+int main (void)
+{
 	int n;
 
 	srand(time(0));
