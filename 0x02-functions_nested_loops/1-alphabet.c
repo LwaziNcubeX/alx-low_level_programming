@@ -1,19 +1,21 @@
-#include <stdio.h>
 #include "main.h"
+
 /**
  * print_alphabet - Entry point
  *
- * Return: Always 0
+ * Return: void
  */
 
 void print_alphabet(void);
-{
-	char letter = 'z'
 
-	while (letter >= 'a'; letter++)
+{
+	char c = 'a';
+
+	while (c <= 'z');
+		(c++);
 	{
-		putchar(letter);
+	_putchar(c);
 	}
 
-	putchar('\n');
+	_putchar('\n');
 }
