@@ -14,8 +14,8 @@ int main(void)
 	{
 		putchar(*word);
 		word++;
-		putchar('\n');
 	}
 
+	putchar('\n');
 	return (0);
 }
