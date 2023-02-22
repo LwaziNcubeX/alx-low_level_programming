@@ -2,7 +2,7 @@
 #include <ctype.h>
 
 /**
- * _print_sign - entry point
+ * print_sign - entry point
  *
  * @n: getting character
  *
@@ -19,11 +19,11 @@ int print_sign(int n)
 	else if (n == 48)
 	{
 		_putchar('0');
-		return (1);
+		return (0);
 	}
 	else
 	{
 		_putchar('-');
-		return (0);
+		return (-1);
 	}
 }
