@@ -1,43 +1,48 @@
 #include "main.h"
 
 /**
- * print_times_table - starting point
- * @n: assigned number
+ * print_times_table - Prints the times table of a given number
+ * @n: The limit of the times table
+ *
+ * Return: void
  */
 void print_times_table(int n)
 {
-	int num, b, total;
+	int i, j, product;
 
-	if (n >= 0 && n <= 15)
+	if (n < 0 || n > 15)
+		return;
+
+	for (i = 0; i <= n; i++)
 	{
-		for (num = 0; num <= n; num++)
+		for (j = 0; j <= n; j++)
 		{
-			_putchar('0');
-
-			for (b = 1; b <= n; b++)
+			product = i * j;
+			if (j == 0)
+				_putchar('0');
+			else if (product < 10)
 			{
 				_putchar(',');
 				_putchar(' ');
-
-				total = num * b;
-
-				if (total <= 99)
-					_putchar(' ');
-				if (total <= 9)
-					_putchar(' ');
-
-				if (total >= 100)
-				{
-					_putchar((total / 100) + '0');
-					_putchar(((total / 10)) % 10 + '0');
-				}
-				else if (total <= 99 && total >= 10)
-				{
-					_putchar((total / 10) + '0');
-				}
-				_putchar((total % 10) + '0');
+				_putchar(' ');
+				_putchar('0' + product);
 			}
-			_putchar('\n');
+			else if (product < 100)
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar('0' + product / 10);
+				_putchar('0' + product % 10);
+			}
+			else
+			{
+				_putchar(',');
+				_putchar(' ');
+				_putchar('0' + product / 100);
+				_putchar('0' + (product / 10) % 10);
+				_putchar('0' + product % 10);
+			}
 		}
+		_putchar('\n');
 	}
 }
