@@ -15,7 +15,7 @@ int _pow_recursion(int x, int y)
 
 	if (y == 0)
 	{
-        return (1);
+		return (1);
 	}
 /* Recursive case: y is greater than 0 */
 	return (x * _pow_recursion(x, y - 1));
