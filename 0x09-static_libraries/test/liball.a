@@ -1,0 +1,460 @@
+!<arch>
+0-isupper.c/    0           0     0     644     242       `
+#include "main.h"
+#include <stdio.h>
+/**
+ * _isupper - checks if character is upper.
+ *
+ * @c: assigned input for c.
+ *
+ * Return: 1 if c is upper else 0
+ */
+
+int _isupper(int c)
+{
+	if (c >= 65 && c <= 90)
+		return (1);
+	else
+		return (0);
+}
+0-memset.c/     0           0     0     644     290       `
+#include "main.h"
+/**
+ * *_memset - entry point
+ * @s: assigned character
+ * @b: assigned character
+ * @n: assigned int
+ * Return: pointer to the memory area s
+ */
+
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		s[i] = b;
+	}
+	return (s);
+}
+0-strcat.c/     0           0     0     644     315       `
+#include "main.h"
+
+/**
+ * _strcat - Entry Point
+ * @dest: string to append by src
+ * @src: string to append to dest
+ *
+ * Return: address of dest
+ */
+char *_strcat(char *dest, char *src)
+{
+	int i, j;
+
+	i = j = 0;
+	while (*(dest + i))
+		i++;
+	while ((*(dest + i) = *(src + j)))
+	{
+		i++;
+		j++;
+	}
+	return (dest);
+}
+
+100-atoi.c/     0           0     0     644     84        `
+#include "main.h"
+/**
+ * *
+ */
+int _atoi(char *s)
+{
+	printf("Value:  %d\n", *s );
+}
+1-isdigit.c/    0           0     0     644     195       `
+#include "main.h"
+/**
+ * _isdigit - Entry point
+ * @c: assigned num
+ * Return: 1 or 0 (success)
+ */
+int _isdigit(int c)
+{
+	if (c >= 48 && c <= 57)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+1-memcpy.c/     0           0     0     644     326       `
+#include "main.h"
+/**
+ * *_memcpy - Entrey point
+ * @dest: assigned destination
+ * @src: assigned source
+ * @n: assigned unsigned int
+ * Return: dest
+ */
+char *_memcpy(char *dest, char *src, unsigned int n)
+{
+	char *dest_ptr = dest;
+	char *src_ptr = src;
+
+	while (n-- > 0)
+	{
+		*dest_ptr++ = *src_ptr++;
+	}
+
+	return (dest);
+}
+1-strncat.c/    0           0     0     644     422       `
+#include "main.h"
+/**
+ * _strncat - entry point,
+ * @dest: assigned destination.
+ * @src: assigned source.
+ * @n: assigned amount of bytes used from src.
+ * Return: the pointer to dest.
+ */
+char *_strncat(char *dest, char *src, int n)
+{
+	int a = 0;
+	int b = 0;
+
+	while (*(dest + a) != '\0')
+	{
+		a++;
+	}
+
+	while (b < n)
+	{
+		*(dest + a) = *(src + b);
+		if (*(src + b) == '\0')
+			break;
+		a++;
+		b++;
+	}
+	return (dest);
+}
+2-strchr.c/     0           0     0     644     280       `
+#include "main.h"
+/**
+ * *_strchr - entry point
+ * @s: assinged character
+ * @c: assignedcharacter
+ * Return: c or NULL
+ */
+char *_strchr(char *s, char c)
+{
+	while (*s != '\0')
+	{
+		if (*s == c)
+		{
+			return (s);
+		}
+		s++;
+	}
+	if (*s == c)
+	{
+		return (s);
+	}
+	return (NULL); }
+2-strlen.c/     0           0     0     644     191       `
+#include "main.h"
+/**
+ * _strlen - Entry Point
+ * @s: pointer of an character
+ * Return: always 0
+ */
+
+int _strlen(char *s)
+{
+	int len;
+
+	len = 0;
+	while (s[len])
+		len++;
+
+	return (len);
+
+}
+
+2-strncpy.c/    0           0     0     644     404       `
+#include "main.h"
+
+/**
+ * _strncpy - Copies n characters of src string to dest string
+ * @dest: Destination string
+ * @src: Source string
+ * @n: Number of characters to copy
+ *
+ * Return: Pointer to dest string
+ */
+char *_strncpy(char *dest, char *src, int n)
+{
+	int i;
+
+	for (i = 0; i < n && src[i] != '\0'; i++)
+	{
+		dest[i] = src[i];
+	}
+	for ( ; i < n; i++)
+	{
+		dest[i] = '\0';
+	}
+
+	return (dest);
+}
+3-islower.c/    0           0     0     644     221       `
+#include "main.h"
+#include <ctype.h>
+
+/**
+ * _islower - entry point
+ *
+ * @c: getting character
+ *
+ * Return: end point
+ */
+
+int _islower(int c)
+{
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+3-puts.c/       0           0     0     644     215       `
+#include "main.h"
+/**
+ * _puts - entry point
+ * @str: assigned char
+ * Return - void
+ */
+
+void _puts(char *str)
+{
+	int string = 0;
+
+	while (str[string])
+	{
+		_putchar(str[string]);
+		string++;
+	}
+	_putchar('\n');
+}
+
+3-strcmp.c/     0           0     0     644     544       `
+#include "main.h"
+/**
+ * _strcmp - entry point
+ * @s1: assigned char
+ * @s2: assigned char
+ * Return: success
+ */
+int _strcmp(char *s1, char *s2)
+{
+	int i = 0;
+	int s1val;
+	int s2val;
+
+/* Iterate through both strings until we find a different character*/
+	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	{
+		i++;
+	}
+
+/* Assign values to the characters in both strings*/
+	s1val = s1[i] == '\0' ? 0 : s1[i];
+	s2val = s2[i] == '\0' ? 0 : s2[i];
+
+/* Return the difference between the values of the characters*/
+	return (s1val - s2val);
+}
+3-strspn.c/     0           0     0     644     400       `
+#include "main.h"
+/**
+ * _strspn - entry pointt
+ * @s: assigned char
+ * @accept: assigned char
+ * Return: No. Of bytes
+ */
+unsigned int _strspn(char *s, char *accept)
+{
+	unsigned int count = 0;
+	char *p;
+
+	for (; *s != '\0'; s++)
+	{
+		for (p = accept; *p != '\0'; p++)
+		{
+			if (*s == *p)
+			{
+				count++;
+				break;
+			}
+		}
+		if
+				(*p == '\0')
+		{
+				return (count);
+		}
+	}
+	return (count);
+}
+4-isalpha.c/    0           0     0     644     271       `
+#include "main.h"
+#include <ctype.h>
+
+/**
+ * _isalpha - entry point
+ *
+ * @c: getting character
+ *
+ * Return: end point
+ */
+
+int _isalpha(int c)
+{
+	if (c >= 97 && c <= 122)
+	{
+		return (1);
+	}
+	else if (c >= 65 && c <= 90)
+	{
+		return (1);
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+4-strpbrk.c/    0           0     0     644     301       `
+#include "main.h"
+/**
+ * *_strpbrk - entry pont
+ * @s: assigne value
+ * @accept: assigned value
+ * Return: null or s
+ */
+char *_strpbrk(char *s, char *accept)
+{
+	char *p;
+
+	while (*s)
+	{
+		for (p = accept; *p; ++p)
+		{
+			if
+				(*p == *s)
+				{
+					return (s);
+				}
+		}
+		++s;
+	}
+	return (NULL);
+}
+
+5-strstr.c/     0           0     0     644     443       `
+#include "main.h"
+/**
+ * _strstr - entry point
+ * @haystack: assigned value
+ * @needle: assigned value
+ * Return: result
+ */
+char *_strstr(char *haystack, char *needle)
+{
+	char *result = NULL;
+	int i, j;
+
+	for (i = 0; haystack[i] != '\0'; i++)
+	{
+		for (j = 0; needle[j] != '\0'; j++)
+		{
+			if (haystack[i + j] != needle[j])
+			{
+				break;
+			}
+		}
+		if (needle[j] == '\0')
+		{
+			result = &haystack[i];
+			break;
+		}
+	}
+	return (result);
+}
+
+6-abs.c/        0           0     0     644     236       `
+#include "main.h"
+#include <ctype.h>
+
+/**
+ * _abs - entry point
+ *
+ * @n: getting value
+ * Return: end point
+ */
+
+int _abs(int n)
+{
+	if (n < 0)
+	{
+		int abs_val;
+
+		abs_val = n * (-1);
+		return (abs_val);
+	}
+	else
+	{
+		return (n);
+	}
+}
+9-strcpy.c/     0           0     0     644     269       `
+#include "main.h"
+
+/**
+* *_strcpy -  entry point
+ * @dest: assigned char
+ * @src: assigned char
+ * Return: char
+ */
+
+char *_strcpy(char *dest, char *src)
+{
+	int index = -1;
+
+	do {
+		index++;
+		dest[index] = src[index];
+	} while (src[index] != '\0');
+
+	return (dest);
+}
+
+_putchar.c/     0           0     0     644     184       `
+#include "main.h"
+#include <stdio.h>
+#include <unistd.h>
+
+/**
+ * _putchar - entry point
+ * @c: assigned char
+ * Return: success
+ */
+int _putchar(char c)
+{
+	return (write(1, &c, 1));
+}
