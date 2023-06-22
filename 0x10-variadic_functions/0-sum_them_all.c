@@ -4,7 +4,7 @@
  * sum_them_all - returns sum of all its parameters
  * @n: takes parameters as digits
  *
- * return: 0 OR sum of digits
+ * Return: 0 OR sum of digits
  */
 int sum_them_all(const unsigned int n, ...)
 {
@@ -25,5 +25,4 @@ int sum_them_all(const unsigned int n, ...)
 	va_end(args);
 
 	return (sum);
-	
 }
