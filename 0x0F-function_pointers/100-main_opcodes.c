@@ -25,4 +25,5 @@ int main(int argc, char *argv[])
 	for (x = 1; x < bytes; ++x)
 		printf(" %02x", *((unsigned char *) (main + x)));
 	putchar('\n');
+	exit(0);
 }
