@@ -3,6 +3,10 @@
 
 /* HEADERS */
 #include <stdio.h>
+#include <string.h>
+#include <stdio.h>
+#include <stdlib.h>
+/* HEADERS */
 
 /**
  * struct list_s - singly linked list
