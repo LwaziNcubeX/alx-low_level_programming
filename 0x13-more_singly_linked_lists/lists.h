@@ -4,6 +4,7 @@
 /* INCLUDED HEADERS */
 #include <stddef.h>
 #include <stdio.h>
+#include <stdlib.h>
 
 
 /* DATA STRUCTURE */
