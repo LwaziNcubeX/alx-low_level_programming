@@ -3,6 +3,8 @@
 
 /* INCLUDED HEADERS */
 #include <stddef.h>
+#include <stdio.h>
+
 
 /* FUNCTION PROTOTYPES */
 unsigned int binary_to_uint(const char *b);
