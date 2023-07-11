@@ -9,7 +9,6 @@
 int create_file(const char *filename, char *text_content)
 {
 	int fd, sz;
-	char *buffer;
 
 	if (filename == NULL)
 		return (-1);
@@ -18,26 +17,15 @@ int create_file(const char *filename, char *text_content)
 	if (fd == -1)
 		return (-1);
 
-	buffer = (char *) malloc(sizeof(char) * (*text_content + 1));
-	if (buffer == NULL)
-	{
-		close(fd);
-		return (-1);
-	}
-
 	if (text_content != NULL)
 	{
 		sz = write(fd, text_content, strlen(text_content));
-		if (sz == '\0')
+		if (sz == -1)
 		{
 			close(fd);
-			free(buffer);
 			return (-1);
 		}
 	}
-
 	close(fd);
-	free(buffer);
-
 	return (1);
 }
