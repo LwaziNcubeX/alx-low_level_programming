@@ -2,24 +2,20 @@ CC = gcc
 SRC = main.c school.c
 OBJ = $(notdir $(SRC:.c=.o))
 NAME = school
-CFLAGS = -Wall -Werror -Wextra -pedantic
 RM := rm -f
+
+.PHONY: all clean oclean fclean re
 
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	$(CC) $(CFLAGS) $(OBJ) -o $(NAME)
+	$(CC) $(OBJ) -o $(NAME)
 
-main.o: main.c m.h
-	$(CC) $(CFLAGS) -c main.c -o main.o
-
-school.o: school.c m.h
-	$(CC) $(CFLAGS) -c school.c -o school.o
+%.o: %.c m.h
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	$(RM) $(NAME)
-	$(RM) $(OBJ)
-	$(RM) *~ \#*\#
+	$(RM) $(NAME) *~ \#*\#
 
 oclean:
 	$(RM) $(OBJ)
